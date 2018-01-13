@@ -1,0 +1,11 @@
+server {
+	listen 80 default_server;
+	listen [::]:80 default_server;
+	root /var/www/davidcelentano.club;
+	index index.html;
+	server_name davidcelentano.club www.davidcelentano.club;
+	
+	location / {
+		try_files $uri $uri/ =404;
+		}
+	}
